@@ -1,0 +1,35 @@
+{
+  "name": "open-library-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for Open Library (https://openlibrary.org/dev/docs/api/search)",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ranjith-kumar-kuruba/open-library-mcp.git"
+  },
+  "keywords": [
+    "openLibrary",
+    "mcp",
+    "open-library"
+  ],
+  "author": "Ranjith",
+  "license": "ISC",
+  "homepage": "https://github.com/ranjith-kumar-kuruba/open-library-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  }
+}
